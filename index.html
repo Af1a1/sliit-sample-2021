@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>LAB 2</h2>
+
+    <script>
+      // function myFun(callback){
+      //     let value = 0;
+      //     setTimeout(function (){
+      //         value = 10;
+      //         callback(value);
+      //     }, 2000);
+      //
+      //     return value;
+      // }
+      //
+      // function f(value){
+      //     console.log(value);
+      // }
+      //
+      // console.log(myFun(f));
+
+      function Vehicle(type) {
+        this.type = type;
+        Vehicle.VehicleCount++;
+      }
+      Vehicle.prototype.drive = function () {
+        console.log('Vehicle is driving');
+      };
+      Vehicle.VehicleCount = 0;
+      console.log(Vehicle.VehicleCount);
+      const vehicle = new Vehicle('Toyota');
+      console.log(Vehicle.VehicleCount);
+      console.log(vehicle.type);
+      vehicle.drive();
+      console.log(vehicle);
+
+      function Car(type) {
+        Vehicle.call(this, type);
+      }
+
+      Car.prototype = Object.create(Vehicle.prototype);
+      Car.prototype.constructor = Car;
+      Car.prototype.balanceWheel = function () {
+        console.log('Wheels are balanced');
+      };
+      const car = new Car('Nissan');
+      console.log(Vehicle.VehicleCount);
+      console.log(car.type);
+      car.balanceWheel();
+    </script>
+  </body>
+</html>
