@@ -1,0 +1,19 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Af1a1/sliit-sample-2021.git"
+  },
+  "author": "aflal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Af1a1/sliit-sample-2021/issues"
+  },
+  "homepage": "https://github.com/Af1a1/sliit-sample-2021#readme"
+}
