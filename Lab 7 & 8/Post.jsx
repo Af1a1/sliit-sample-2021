@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {BrowserRouter as Router, Redirect, Switch, Route, Link} from 'react-router-dom';
 
 export default class Post extends React.Component {
     constructor(props) {
@@ -10,6 +10,7 @@ render() {
 
     const {post} = this.props;
     return <div>
+      
         <div>
             <p>ID: {post.id}</p>
         </div>
@@ -20,6 +21,7 @@ render() {
             <p>Description: {post.description}</p>
         </div> 
         
+       
     </div>;
     }   
 
